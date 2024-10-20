@@ -16,8 +16,6 @@ sidebarBtn.addEventListener("click", function () {
 
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
 
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
@@ -27,7 +25,6 @@ const modalText = document.querySelector("[data-modal-text]");
 // modal toggle function
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
 };
 
 // add click event to all modal items
@@ -46,53 +43,16 @@ for (let i = 0; i < testimonialsItem.length; i++) {
   });
 }
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-// custom select variables
-const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-selecct-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () {
-  elementToggleFunc(this);
-});
-
-// project btn
-const projectItems = document.querySelectorAll(".project-item");
-
-const view = document.querySelector("[data-project-btn]");
-const code = document.querySelector("[data-code-btn]");
-
-view.addEventListener("click", function () {
-  window.open(this.getAttribute("data-link")).focus();
-});
-
-code.addEventListener("click", function () {
-  window.open(this.getAttribute("data-link")).focus();
-});
-
-for (let i = 0; i < projectItems.length; i++) {
-  const view = projectItems[i].querySelector("[data-project-btn]");
-  const code = projectItems[i].querySelector("[data-code-btn]");
-
-  view.addEventListener("click", function () {
-    window.open(this.getAttribute("data-link")).focus();
-  });
-
-  code.addEventListener("click", function () {
-    window.open(this.getAttribute("data-link")).focus();
-  });
-}
 
 // add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
     filterFunc(selectedValue);
   });
 }
