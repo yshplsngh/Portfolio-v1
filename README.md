@@ -1,2 +1,1 @@
-Personal Portfolio website
-visit [yshplsngh.in](https://yshplsngh.in)
+Personal Portfolio website [yshplsngh.in](https://yshplsngh.in)
