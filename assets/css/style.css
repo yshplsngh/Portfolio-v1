@@ -227,7 +227,7 @@ article.active {
 .h3,
 .h4,
 .h5 {
-  color: var(--white-2);
+  color: var(--vegas-gold);
   text-transform: capitalize;
 }
 
@@ -241,7 +241,6 @@ article.active {
 
 .h4 {
   font-size: var(--fs-4);
-  text-decoration: underline;
 }
 
 .h5 {
